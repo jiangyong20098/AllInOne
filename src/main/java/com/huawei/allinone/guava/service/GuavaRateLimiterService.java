@@ -1,4 +1,4 @@
-package com.huawei.allinone.guava;
+package com.huawei.allinone.guava.service;
 
 import com.google.common.util.concurrent.RateLimiter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,15 +23,3 @@ public class GuavaRateLimiterService {
     }
 
 }
-    @Autowired
-    private GuavaRateLimiterService rateLimiterService;
-
-    @ResponseBody
-    @RequestMapping("/ratelimiter")
-    public Result testRateLimiter() {
-        StringUtils.isNotEmpty();
-        if (rateLimiterService.tryAcquire()) {
-            return ResultUtil.success1(1001, "成功获取许可");
-        }
-        return ResultUtil.success1(1002, "未获取到许可");
-    }

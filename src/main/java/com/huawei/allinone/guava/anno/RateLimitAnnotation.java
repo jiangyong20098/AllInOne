@@ -1,4 +1,4 @@
-package com.huawei.allinone.guava;
+package com.huawei.allinone.guava.anno;
 
 import java.lang.annotation.*;
  
@@ -9,6 +9,6 @@ import java.lang.annotation.*;
 @Documented
 @Target({ElementType.METHOD, ElementType.FIELD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface RateLimitAspect {
+public @interface RateLimitAnnotation {
    
 }
